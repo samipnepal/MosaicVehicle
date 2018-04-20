@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+    <title><?php bloginfo( 'title' ); ?></title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--CSS-->
@@ -12,8 +12,13 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <?php wp_head(); ?>
 </head>
-<body>
-<div class="custom-header-media">
-    <?php the_custom_header_markup(); ?>
-</div>
+<body <?php body_class(); ?>>
+
+<div class="custom-header">
+
+
+    <?php get_template_part( 'template/site', 'branding' ); ?>
+
+</div><!-- .custom-header -->
+
 <?php get_template_part( 'template/navbar', 'top' ); ?>

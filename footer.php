@@ -36,16 +36,5 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <?php wp_footer(); ?>
-<script>
-    (function($){
-        $(function(){
-
-            $('.sidenav').sidenav();
-            $('.parallax').parallax();
-
-        }); // end of document ready
-    })(jQuery); // end of jQuery name space
-
-</script>
 </body>
 </html>

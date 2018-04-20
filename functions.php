@@ -7,4 +7,17 @@ function remove_admin_login_header() {
 }
 add_action('get_header', 'remove_admin_login_header');
 show_admin_bar( false );
+
+function themename_custom_header_setup() {
+    $args = array(
+        'default-image'      => get_template_directory_uri() . 'assets/images/mosaicadventure2-e1461218851878.jpg',
+        'default-text-color' => '000',
+        'width'              => 1000,
+        'height'             => 250,
+        'flex-width'         => true,
+        'flex-height'        => true,
+    );
+    add_theme_support( 'custom-header', $args );
+}
+add_action( 'after_setup_theme', 'themename_custom_header_setup' );
 ?>
